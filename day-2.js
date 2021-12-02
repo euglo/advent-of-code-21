@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const dive = () => {
-    const data = fs.readFileSync('file/day-2.txt');
+    const data = fs.readFileSync('inputs/day-2.txt');
     const moves = data.toString().split('\n')
         .map(e => {
             const arr = e.split(' ');
@@ -30,7 +30,7 @@ const dive = () => {
 }
 
 const diveAim = () => {
-    const data = fs.readFileSync('file/day-2.txt');
+    const data = fs.readFileSync('inputs/day-2.txt');
     const moves = data.toString().split('\n')
         .map(e => {
             const arr = e.split(' ');
