@@ -1,8 +1,8 @@
 const fs = require('fs');
+const { processInput } = require('./common');
 
 const sonarSweep = () => {
-    const data = fs.readFileSync('inputs/day-1.txt');
-    const depths = data.toString().split('\n').map(e => parseInt(e));
+    const depths = processInput('inputs/day-1.txt').map(e => parseInt(e));
     
     let count = 0;
     for (let i = 1; i < depths.length; i++) {
@@ -14,10 +14,8 @@ const sonarSweep = () => {
 };
 
 const sonarSweepSliding = () => {
-    const data = fs.readFileSync('inputs/day-1.txt');
-    const depths = data.toString().split('\n').map(e => parseInt(e));
+    const depths = processInput('inputs/day-1.txt').map(e => parseInt(e));
 
-    let prev = depths[0] + depths[1] + depths[2], cur;
     let count = 0;
 
     for (let i = 3; i < depths.length; i++) {

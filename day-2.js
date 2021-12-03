@@ -1,8 +1,7 @@
-const fs = require('fs');
+const { processInput } = require('./common');
 
 const dive = () => {
-    const data = fs.readFileSync('inputs/day-2.txt');
-    const moves = data.toString().split('\n')
+    const moves = processInput('inputs/day-2.txt')
         .map(e => {
             const arr = e.split(' ');
             return [arr[0], parseInt(arr[1])];
@@ -30,8 +29,7 @@ const dive = () => {
 }
 
 const diveAim = () => {
-    const data = fs.readFileSync('inputs/day-2.txt');
-    const moves = data.toString().split('\n')
+    const moves = processInput('inputs/day-2.txt')
         .map(e => {
             const arr = e.split(' ');
             return [arr[0], parseInt(arr[1])];
